@@ -7,32 +7,39 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#111;
+    background:#0f0f0f;
     color:white;
 }
 
 .header{
     background:black;
-    height:300px;
+    height:280px;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:60px;
+    font-size:70px;
     font-weight:bold;
+    text-align:center;
 }
 
 .videos{
     padding:40px;
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    text-align:center;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
 }
 
-iframe{
+.video-card iframe{
     width:100%;
     height:220px;
-    border-radius:15px;
+    border-radius:18px;
+}
+
+.video-card{
+    background:#181818;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -44,25 +51,20 @@ Brigada 33
 </div>
 
 <div class="videos">
-<div>
-<video controls>
-<source src="https://cdn.discordapp.com/attachments/1476410365217603706/1476947339301093549/Screen_Recording_20260227_170829.mp4" type="video/mp4">
-</video>
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
-<div>
-<video controls>
-<source src="https://cdn.discordapp.com/attachments/1476410365217603706/1476947339301093549/Screen_Recording_20260227_170829.mp4" type="video/mp4">
-</video>
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
-<div>
-<video controls>
-<source src="https://cdn.discordapp.com/attachments/1476410365217603706/1476947339301093549/Screen_Recording_20260227_170829.mp4" type="video/mp4">
-</video>
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
-<div>
-<video controls>
-<source src="https://cdn.discordapp.com/attachments/1476410365217603706/1476947339301093549/Screen_Recording_20260227_170829.mp4" type="video/mp4">
-</video>
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 </div>
 
