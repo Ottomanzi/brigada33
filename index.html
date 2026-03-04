@@ -21,28 +21,31 @@ body{
     font-weight:bold;
 }
 
-.gallery{
-    padding:40px;
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
-}
-
-.gallery img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
 .video-section{
     padding:40px;
     text-align:center;
 }
 
-video{
+.video-section iframe{
     width:80%;
     max-width:900px;
+    height:400px;
     border-radius:20px;
+}
+
+.gallery{
+    padding:40px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    width:400px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 </style>
 </head>
@@ -53,22 +56,13 @@ video{
 Brigada 33
 </div>
 
-<div class="videos" style="padding:40px; display:grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap:30px;">
-<div class="video-card">
-<iframe width="100%" height="220" src="https://www.youtube.com/embed/c65CHwQ9VlA" allowfullscreen style="border-radius:18px;"></iframe>
+<div class="video-section">
+<iframe src="https://www.youtube.com/embed/c65CHwQ9VlA" allowfullscreen></iframe>
 </div>
 
-<div class="video-card">
-<iframe width="100%" height="220" src="https://www.youtube.com/embed/c65CHwQ9VlA" allowfullscreen style="border-radius:18px;"></iframe>
-</div>
-
-<div class="video-card">
-<iframe width="100%" height="220" src="https://www.youtube.com/embed/c65CHwQ9VlA" allowfullscreen style="border-radius:18px;"></iframe>
-</div>
-
-<div class="video-card">
-<iframe width="100%" height="220" src="https://www.youtube.com/embed/c65CHwQ9VlA" allowfullscreen style="border-radius:18px;"></iframe>
-</div>
+<div class="gallery">
+<img src="foto1.png" alt="Brigada 33 Foto 1">
+<img src="foto2.png" alt="Brigada 33 Foto 2">
 </div>
 
 </body>
