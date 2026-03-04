@@ -1,74 +1,53 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Oyun Mağazası</title>
+<title>Brigada 33</title>
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
     margin:0;
+    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
 }
 
-header{
-background:#222;
-color:white;
-padding:15px;
-text-align:center;
+.header{
+    background:black;
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    font-weight:bold;
 }
 
-.container{
-display:grid;
-grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
+.videos{
+    padding:40px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    text-align:center;
 }
 
-.card{
-background:white;
-padding:15px;
-border-radius:15px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-text-align:center;
+iframe{
+    width:100%;
+    height:220px;
+    border-radius:15px;
 }
-
-button{
-background:black;
-color:white;
-border:none;
-padding:10px;
-border-radius:10px;
-cursor:pointer;
-width:100%;
-}
-
-button:hover </style>
-
+</style>
 </head>
 
 <body>
 
-<header>
-<h1>Oyun Dijital Mağaza</h1>
-</header>
-
-<div class="container">
-
-<div class="card">
-<h2>Oyun Paketi 1</h2>
-<p>Bilgi paketi açıklaması</p>
-<h3>₺50</h3>
-<button>Satın Al</button>
+<div class="header">
+Brigada 33
 </div>
 
-<div class="card">
-<h2>Oyun Paketi 2</h2>
-<p>Bilgi paketi açıklaması</p>
-<h3>₺100</h3>
-<button>Satın Al</button>
-</div>
-
+<div class="videos">
+<iframe src="https://cdn.discordapp.com/attachments/1476410365217603706/1476947339301093549/Screen_Recording_20260227_170829.mp4?ex=69a8e8a6&is=69a79726&hm=bb69fcb2eb70dcf887dc8cc602d0fea729f4135658e587773dfce4659b83b6f4&" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 
 </body>
