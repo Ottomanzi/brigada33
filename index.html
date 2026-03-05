@@ -3,50 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <title>Brigada 33</title>
+
 <style>
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#0f0f0f;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
     color:white;
 }
 
 .header{
-    background:black;
-    height:250px;
+    background:linear-gradient(180deg,#000,#111);
+    height:220px;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:60px;
+    font-size:64px;
     font-weight:bold;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#ff2a2a;
+    text-shadow:0 0 20px rgba(255,0,0,0.6);
 }
 
 .video-section{
-    padding:40px;
+    padding:60px 20px;
     text-align:center;
 }
 
 .video-section iframe{
-    width:80%;
-    max-width:900px;
-    height:400px;
-    border-radius:20px;
+    width:85%;
+    max-width:950px;
+    height:480px;
+    border:none;
+    border-radius:18px;
+    box-shadow:0 0 30px rgba(0,0,0,0.8);
 }
 
 .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
     padding:40px;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
+    max-width:1200px;
+    margin:auto;
 }
 
 .gallery img{
-    width:400px;
-    max-width:90%;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(0,0,0,0.6);
+    width:100%;
+    border-radius:14px;
+    transition:0.35s;
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(0,0,0,0.7);
 }
+
+.gallery img:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    font-size:14px;
+}
+
 </style>
 </head>
 
@@ -61,8 +83,15 @@ Brigada 33
 </div>
 
 <div class="gallery">
-<img src="foto1.png" alt="Brigada 33 Foto 1">
-<img src="foto2.png" alt="Brigada 33 Foto 2">
+<img src="foto1.png">
+<img src="foto2.png">
+<img src="foto3.png">
+<img src="foto4.png">
+<img src="foto5.png">
+</div>
+
+<div class="footer">
+Brigada 33 Official Site
 </div>
 
 </body>
