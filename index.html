@@ -2,170 +2,118 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brigada 33</title>
 
 <style>
-
-html{
-scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0b0b0b;
+background:#0a0a0a;
 color:white;
 }
 
-/* NAVBAR */
-
-.navbar{
-position:fixed;
+header{
+position:sticky;
 top:0;
-width:100%;
-background:rgba(0,0,0,0.8);
+background:#000;
+padding:20px 40px;
 display:flex;
-justify-content:center;
-gap:40px;
-padding:18px;
-z-index:1000;
-backdrop-filter:blur(6px);
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #222;
 }
 
-.navbar a{
-color:white;
-text-decoration:none;
+.logo{
+font-size:26px;
 font-weight:bold;
-letter-spacing:1px;
-transition:0.3s;
-}
-
-.navbar a:hover{
+letter-spacing:2px;
 color:#ff2a2a;
 }
 
-/* HERO */
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+opacity:0.8;
+}
+
+nav a:hover{opacity:1}
 
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("foto1.png");
-background-size:cover;
-background-position:center;
+height:70vh;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
+align-items:center;
 text-align:center;
+padding:20px;
 }
 
 .hero h1{
-font-size:72px;
-letter-spacing:6px;
-color:#ff2a2a;
-text-shadow:0 0 20px rgba(255,0,0,0.7);
+font-size:64px;
+margin:0;
+letter-spacing:4px;
 }
 
-/* SECTION */
+.hero p{
+color:#aaa;
+margin-top:10px;
+}
 
-.section{
-padding:80px 20px;
+.video-section{
+padding:60px 20px;
 text-align:center;
 }
 
-/* VIDEO */
-
-.video iframe{
+.video-section iframe{
 width:90%;
-max-width:900px;
-height:480px;
-border-radius:15px;
+max-width:1000px;
+height:500px;
 border:none;
-box-shadow:0 0 30px rgba(0,0,0,0.8);
+border-radius:16px;
 }
-
-/* GALLERY */
 
 .gallery{
+max-width:1400px;
+margin:auto;
+padding:60px 40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
-max-width:1200px;
-margin:auto;
-padding-top:40px;
 }
 
-.gallery img{
-width:100%;
+.card{
+background:#111;
 border-radius:14px;
+overflow:hidden;
+transition:0.35s;
 cursor:pointer;
-transition:0.4s;
-box-shadow:0 0 15px rgba(0,0,0,0.7);
 }
 
-.gallery img:hover{
-transform:scale(1.08);
-box-shadow:0 0 25px rgba(255,0,0,0.6);
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.8);
 }
 
-/* ABOUT */
+.card img{
+width:100%;
+display:block;
+}
 
-.about{
-max-width:800px;
-margin:auto;
-line-height:1.7;
+.card-title{
+padding:16px;
+font-size:14px;
 color:#ccc;
-font-size:18px;
 }
 
-/* FOOTER */
-
-.footer{
+footer{
 text-align:center;
 padding:40px;
-color:#777;
-}
-
-/* MODAL */
-
-.modal{
-display:none;
-position:fixed;
-z-index:2000;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.92);
-justify-content:center;
-align-items:center;
-}
-
-.modal img{
-max-width:90%;
-max-height:90%;
-border-radius:12px;
-}
-
-.close{
-position:absolute;
-top:30px;
-right:40px;
-font-size:45px;
-cursor:pointer;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-.video iframe{
-height:260px;
-}
-
+color:#666;
+border-top:1px solid #222;
 }
 
 </style>
@@ -173,91 +121,56 @@ height:260px;
 
 <body>
 
-<div class="navbar">
+<header>
+<div class="logo">Brigada 33</div>
+<nav>
 <a href="#">Home</a>
-<a href="#video">Video</a>
-<a href="#gallery">Gallery</a>
-<a href="#about">About</a>
-</div>
+<a href="#">Video</a>
+<a href="#">Gallery</a>
+</nav>
+</header>
 
-<div class="hero">
-<h1>BRIGADA 33</h1>
-</div>
+<section class="hero">
+<h1>Brigada 33</h1>
+<p>Official Video & Gallery</p>
+</section>
 
-<div class="section video" id="video">
-
-<h2>Video</h2>
-
-<br>
-
+<section class="video-section">
 <iframe src="https://www.youtube.com/embed/c65CHwQ9VlA" allowfullscreen></iframe>
+</section>
 
+<section class="gallery">
+
+<div class="card">
+<img src="foto1.png">
+<div class="card-title">Brigada Scene 1</div>
 </div>
 
-<div class="section" id="gallery">
-
-<h2>Gallery</h2>
-
-<div class="gallery">
-
-<img src="foto1.png" class="gallery-item">
-<img src="foto2.png" class="gallery-item">
-<img src="foto3.png" class="gallery-item">
-<img src="foto4.png" class="gallery-item">
-<img src="foto5.png" class="gallery-item">
-
+<div class="card">
+<img src="foto2.png">
+<div class="card-title">Brigada Scene 2</div>
 </div>
 
+<div class="card">
+<img src="foto3.png">
+<div class="card-title">Brigada Scene 3</div>
 </div>
 
-<div class="section" id="about">
-
-<h2>About Brigada 33</h2>
-
-<div class="about">
-
-Brigada 33 is a community focused on creativity, teamwork and digital culture.  
-This website showcases videos, media and projects related to Brigada 33.
-
+<div class="card">
+<img src="foto4.png">
+<div class="card-title">Brigada Scene 4</div>
 </div>
 
+<div class="card">
+<img src="foto5.png">
+<div class="card-title">Brigada Scene 5</div>
 </div>
 
-<div class="footer">
-Brigada 33 Official Site
-</div>
+</section>
 
-
-<div class="modal" id="modal">
-<span class="close" id="closeBtn">&times;</span>
-<img id="modalImg">
-</div>
-
-
-<script>
-
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const closeBtn = document.getElementById("closeBtn");
-
-document.querySelectorAll(".gallery-item").forEach(img=>{
-img.addEventListener("click",()=>{
-modal.style.display="flex";
-modalImg.src=img.src;
-});
-});
-
-closeBtn.onclick=()=>{
-modal.style.display="none";
-}
-
-modal.onclick=(e)=>{
-if(e.target===modal){
-modal.style.display="none";
-}
-}
-
-</script>
+<footer>
+Brigada 33 © 2026
+</footer>
 
 </body>
 </html>
