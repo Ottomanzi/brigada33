@@ -6,114 +6,114 @@
 <title>Brigada 33</title>
 
 <style>
-*{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0a0a0a;
+background:#050505;
 color:white;
+overflow-x:hidden;
 }
 
-header{
-position:sticky;
-top:0;
-background:#000;
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #222;
-}
-
-.logo{
-font-size:26px;
-font-weight:bold;
-letter-spacing:2px;
-color:#ff2a2a;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-opacity:0.8;
-}
-
-nav a:hover{opacity:1}
-
+/* HERO */
 .hero{
-height:70vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+background:radial-gradient(circle at center,#111 0%,#000 70%);
 }
 
 .hero h1{
-font-size:64px;
-margin:0;
-letter-spacing:4px;
+font-size:90px;
+letter-spacing:6px;
+color:#ff2a2a;
+text-shadow:0 0 25px rgba(255,0,0,0.6);
 }
 
 .hero p{
-color:#aaa;
-margin-top:10px;
+margin-top:20px;
+color:#888;
+font-size:18px;
 }
 
+.scroll{
+margin-top:40px;
+font-size:14px;
+color:#aaa;
+animation:float 2s infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(8px)}
+100%{transform:translateY(0)}
+}
+
+/* VIDEO */
 .video-section{
-padding:60px 20px;
+padding:120px 20px;
 text-align:center;
+background:#080808;
 }
 
 .video-section iframe{
 width:90%;
 max-width:1000px;
-height:500px;
+height:520px;
 border:none;
 border-radius:16px;
+box-shadow:0 20px 60px rgba(0,0,0,0.9);
 }
 
+/* GALLERY */
 .gallery{
 max-width:1400px;
 margin:auto;
-padding:60px 40px;
+padding:120px 40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
 .card{
-background:#111;
-border-radius:14px;
+position:relative;
 overflow:hidden;
-transition:0.35s;
+border-radius:14px;
 cursor:pointer;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,0.8);
 }
 
 .card img{
 width:100%;
 display:block;
+transition:transform 0.6s;
 }
 
-.card-title{
-padding:16px;
-font-size:14px;
-color:#ccc;
+.card:hover img{
+transform:scale(1.1);
 }
 
+.card::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(transparent,rgba(0,0,0,0.8));
+opacity:0;
+transition:0.4s;
+}
+
+.card:hover::after{
+opacity:1;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
-padding:40px;
+padding:60px 20px;
 color:#666;
-border-top:1px solid #222;
+border-top:1px solid #111;
 }
 
 </style>
@@ -121,18 +121,10 @@ border-top:1px solid #222;
 
 <body>
 
-<header>
-<div class="logo">Brigada 33</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Video</a>
-<a href="#">Gallery</a>
-</nav>
-</header>
-
 <section class="hero">
-<h1>Brigada 33</h1>
-<p>Official Video & Gallery</p>
+<h1>BRIGADA 33</h1>
+<p>Official Video & Scene Gallery</p>
+<div class="scroll">SCROLL</div>
 </section>
 
 <section class="video-section">
@@ -143,27 +135,22 @@ border-top:1px solid #222;
 
 <div class="card">
 <img src="foto1.png">
-<div class="card-title">Brigada Scene 1</div>
 </div>
 
 <div class="card">
 <img src="foto2.png">
-<div class="card-title">Brigada Scene 2</div>
 </div>
 
 <div class="card">
 <img src="foto3.png">
-<div class="card-title">Brigada Scene 3</div>
 </div>
 
 <div class="card">
 <img src="foto4.png">
-<div class="card-title">Brigada Scene 4</div>
 </div>
 
 <div class="card">
 <img src="foto5.png">
-<div class="card-title">Brigada Scene 5</div>
 </div>
 
 </section>
